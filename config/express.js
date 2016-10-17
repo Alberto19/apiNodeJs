@@ -13,6 +13,7 @@ module.exports = function(){
     consign()
         .include('controllers')
         .then('infra')
+        .then('servicos')
         .into(app);
 
     return app;
