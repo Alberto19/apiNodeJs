@@ -8,6 +8,7 @@
 - npm i --save mysql
 - npm i --save express-validator
 - npm i --save restify
+- npm i --save soap
 
 ## fazendo o poste pegando o Json
 
