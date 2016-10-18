@@ -13,13 +13,19 @@
 ## fazendo o poste pegando o Json
 
 - POST
-- curl http://localhost:3000/pagamentos/pagamento -X POST -v -H "Content-type: application/json" -d @files/pagamento.json | json_pp
-
+````
+ curl http://localhost:3000/pagamentos/pagamento -X POST -v -H "Content-type: application/json" -d @files/pagamento.json | json_pp
+````
 - PUT
-- curl -X PUT http://localhost:3000/pagamentos/pagamento/12 -v
-
+````
+curl -X PUT http://localhost:3000/pagamentos/pagamento/12 -v
+````
 - DELETE
-- curl -X DELETE http://localhost:3000/pagamentos/pagamento/10 -v
+````
+curl -X DELETE http://localhost:3000/pagamentos/pagamento/10 -v
+````
 
 - Servico correios
-- curl -X POST http://localhost:3000/correios/calculo-prazo -H "Content-type: application/json" -d @files/dadosEntrega.json | json_pp
+````
+curl -X POST http://localhost:3000/correios/calculo-prazo -H "Content-type: application/json" -d @files/dadosEntrega.json | json_pp
+````
