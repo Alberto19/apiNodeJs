@@ -4,6 +4,20 @@ module.exports = function(app){
         res.send('ok');
     });
 
+    app.get('/pagamentos/pagamento/:id', function(req,res){
+        var id = req.params.id;
+
+        var con = app.infra.connectionFactory();
+        var pagamentoDAO = new app.infra.PagamentoDAO(con);
+        pagamentoDAO.buscaPorId(id, function(err, result){
+            if(err){
+                res.status(500).send(err);
+                return;
+            }
+            res.json(result);
+        });
+    });
+
     app.delete('/pagamentos/pagamento/:id', function(req, res){
         var pagamento = {};
         var id = req.params.id;

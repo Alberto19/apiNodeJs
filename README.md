@@ -12,6 +12,10 @@
 
 ## fazendo o poste pegando o Json
 
+- GET
+````
+curl -X GET http://localhost:3000/pagamentos/pagamento/20 -v
+````
 - POST
 ````
  curl http://localhost:3000/pagamentos/pagamento -X POST -v -H "Content-type: application/json" -d @files/pagamento.json | json_pp
