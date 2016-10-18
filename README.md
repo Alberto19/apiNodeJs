@@ -29,3 +29,8 @@ curl -X DELETE http://localhost:3000/pagamentos/pagamento/10 -v
 ````
 curl -X POST http://localhost:3000/correios/calculo-prazo -H "Content-type: application/json" -d @files/dadosEntrega.json | json_pp
 ````
+
+- Upload de um file  
+````
+curl -X POST http://localhost:3000/upload/imagem --data-binary @util/le.jpg -H "Content-type: application/octet-stream" -v -H "filename: imagem.jpg"
+````
