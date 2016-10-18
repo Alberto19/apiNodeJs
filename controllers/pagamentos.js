@@ -101,6 +101,27 @@ module.exports = function(app){
                             return;
                         });
                 }
+                else
+                {
+                        res.location('/pagamentos/pagamento/' + pagamento.id);
+                        var response = {
+                            dados_do_pagamento: pagamento,
+                            links: [
+                                {
+                                    href:"http://localhost:3000/pagamentos/pagamento/" + pagamento.id,
+                                    rel:"CONFIRMAR",    
+                                    method:"PUT"
+                                },
+                                {
+                                    href:"http://localhost:3000/pagamentos/pagamento/" + pagamento.id,
+                                    rel:"CANCELAR",    
+                                    method:"DELETE"
+                                }
+                            ]
+                        }
+                    res.status(201).json(response);
+                    return;
+                }
             }
         });
     });
